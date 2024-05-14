@@ -15,8 +15,12 @@ return new class extends Migration
             $table->id();
             $table->dateTime('tanggal_update');
             $table->bigInteger('status_manifes_id');
+            $table->bigInteger('pesanan_mencargo_id');
+            $table->bigInteger('vendor_id')->nullable();
+            $table->dateTime('tanggal_jalan');
+            $table->string('estimasi');
+            $table->string('image');
             $table->timestamps();
-            
         });
     }
 

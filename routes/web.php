@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::singularResourceParameters(false);
 
 Route::get('/',[App\Http\Controllers\LandingPageController::class,'index'])->name('landing_page_index');
 
@@ -34,5 +35,10 @@ Route::prefix('pembayaran')->group(function(){
 });
 
 Route::resource('statusmanifes',\App\Http\Controllers\StatusManifesController::class);
+
+Route::resource('mtc',\App\Http\Controllers\MTCController::class);
+
+
+Route::resource('datavendor',\App\Http\Controllers\VendorController::class);
 
 

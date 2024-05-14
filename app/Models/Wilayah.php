@@ -20,4 +20,9 @@ class Wilayah extends Model
     {
         return $this->hasMany(Customer::class, 'wilayah_id','id');
     }
+
+    public function vendor()
+    {
+        return $this->hasMany(Vendor::class, 'wilayah_id','id');
+    }
 }

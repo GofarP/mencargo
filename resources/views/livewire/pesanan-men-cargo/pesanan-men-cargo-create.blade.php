@@ -19,6 +19,9 @@
                     <select data-pharaonic="select2" name="customer_id" id="customer_id"
                     data-component-id="{{ $this->getId() }}" class="form-control" value="{{old('customer_id')}}" required autofocus>
                         <option value="">Pilih Customer</option>
+                        @foreach ($data_customer as $item)
+                        <option value="{{$item->id}}">{{$item->nama}}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
@@ -29,6 +32,9 @@
                     <select data-pharaonic="select2" name="metode_pembayaran_id" value="{{old('metode_pembayaran_id')}}" data-component-id="{{ $this->getId() }}"
                     class="form-control" required>
                         <option value="">Pilh Metode Pembayaran</option>
+                        @foreach ($data_metode_pembayaran as $item)
+                        <option value="{{$item->id}}">{{$item->nama}}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
@@ -38,7 +44,10 @@
                 <div class="form-group">
                     <label for="status_pembayaran_id">Status Pembayaran</label>
                     <select data-pharaonic="select2" name="status_pembayaran_id" value="{{old('status_pembayaran_id')}}" data-component-id="{{ uniqid() }}" class="form-control" required>
-                        <option value="">Semua</option>
+                        <option value="">Pilih Status Pembayaran</option>
+                        @foreach ($data_status_pembayaran as $item)
+                        <option value="{{$item->id}}">{{$item->nama}}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
@@ -155,12 +164,6 @@
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
-                <div class="form-group">
-                    <label for="instruksi">Instruksi</label>
-                    <input type="text" name="instruksi" value="{{old('instruksi')}}" class="form-control" required>
-                </div>
-            </div>
 
             <div class="col-xl-3 col-lg-3 col-md-6 col-12">
                 <div class="form-group">
@@ -180,6 +183,9 @@
                     <label for="daerah_asal">Daerah Asal</label>
                     <select name="daerah_asal" id="daerah_asal" class="form-control" required>
                         <option value="">Pilih Daerah Asal</option>
+                        @foreach ($data_wilayah as $item)
+                        <option value="{{$item->id}}">{{$item->nama}}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
@@ -189,18 +195,13 @@
                     <label for="daerah_tujuan">Daerah Tujuan</label>
                     <select name="daerah_tujuan" id="daerah_tujuan" class="form-control" required>
                         <option value="">Pilih Daerah Tujuan</option>
+                        @foreach ($data_wilayah as $item)
+                        <option value="{{$item->id}}">{{$item->nama}}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
-                <div class="form-group">
-                    <label for="alamat_detail_tujuan">Alamat Detail Tujuan</label>
-                    <textarea name="alamat_detail_tujuan" id="alamat_detail_tujuan" cols="30" rows="10" required>
-                        {{old('alamat_detail_tujuan')}}
-                    </textarea>
-                </div>
-            </div>
 
             <div class="col-xl-3 col-lg-3 col-md-6 col-12">
                 <div class="form-group">
@@ -224,11 +225,27 @@
             </div>
 
             <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
                 <div class="form-group">
                     <label for="catatan_barang">Catatan Barang</label>
-                    <textarea name="catatan_barang" id="catatan_barang" cols="30" rows="10" required>
-                        {{old('catatan_barang')}}
-                    </textarea>
+                    <textarea name="catatan_barang" id="catatan_barang" cols="30" rows="10" required></textarea>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                <div class="form-group">
+                    <label for="instruksi">Instruksi</label>
+                    <textarea name="instruksi" id="instruksi" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                <div class="form-group">
+                    <label for="alamat_detail_tujuan">Alamat Detail Tujuan</label>
+                    <textarea name="alamat_detail_tujuan" id="alamat_detail_tujuan" cols="30" rows="10" required></textarea>
                 </div>
             </div>
 

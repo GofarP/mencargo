@@ -12,7 +12,7 @@ class MTCController extends Controller
      */
     public function index()
     {
-        //
+        return view('mtc.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class MTCController extends Controller
      */
     public function create()
     {
-        //
+        return view('mtc.create');
     }
 
     /**
@@ -42,9 +42,9 @@ class MTCController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(MTC $mTC)
+    public function edit(MTC $mtc)
     {
-        //
+        return view('mtc.edit',compact('mtc'));
     }
 
     /**

@@ -20,7 +20,7 @@
             <div class="container-fluid">
 
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Edit Metode Pembayaran</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Tambah Data Mtc</h1>
                 </div>
 
                 <!-- Content Row -->
@@ -37,13 +37,12 @@
 
                     <div class="card w-100">
                         <div class="card-body">
-                            <form action="{{ route('metodepembayaran.update',$metodepembayaran->id) }}" method="POST">
+                            <form action="{{ route('mtc.store') }}" method="POST">
                                 @csrf
-                                @method('PUT')
                                 <div class="form-group">
                                 <label for="nama">Nama</label>
                                     <input type="text" name="nama"
-                                        class="form-control @error('nama') is-invalid @enderror" value="{{$metodepembayaran->nama}}">
+                                        class="form-control @error('nama') is-invalid @enderror">
                                     @error('nama')
                                         <div class="invalid-feedback">
                                             {{ $message }}

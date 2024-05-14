@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PesananMenCargo;
+use App\Models\Customer;
 use Illuminate\Http\Request;
+use App\Models\PesananMenCargo;
+use App\Models\MetodePembayaran;
+use App\Models\StatusPembayaran;
+use App\Http\Controllers\Controller;
 
 class PesananMenCargoController extends Controller
 {
@@ -20,7 +24,6 @@ class PesananMenCargoController extends Controller
      */
     public function create()
     {
-        
         return view('pesananmencargo.create');
     }
 

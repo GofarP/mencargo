@@ -98,7 +98,28 @@
         <div id="collapseMtc" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Data Mtc:</h6>
-                <a class="collapse-item" href="">MTC</a>
+                <a class="collapse-item" href="{{route('mtc.index')}}">MTC</a>
+            </div>
+        </div>
+    </li>
+
+
+    <hr class="sidebar-divider">
+
+    <div class="sidebar-heading">
+        Vendor
+    </div>
+
+    <li class="nav-item {{ Request::is('datavendor*') ? 'active' : '' }}">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVendor"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-ship"></i>
+            <span>Vendor</span>
+        </a>
+        <div id="collapseVendor" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Data Vendor:</h6>
+                <a class="collapse-item" href="{{route('datavendor.index')}}">Vendor</a>
             </div>
         </div>
     </li>
