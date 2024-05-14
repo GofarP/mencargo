@@ -124,6 +124,24 @@
         </div>
     </li>
 
+    <div class="sidebar-heading">
+        Status Manifes
+    </div>
+
+    <li class="nav-item {{ Request::is('statusmanifes*') ? 'active' : '' }}">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStatusManifes"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Status Manifes</span>
+        </a>
+        <div id="collapseStatusManifes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Data Status Manifes:</h6>
+                <a class="collapse-item" href="{{route('statusmanifes.index')}}">Status Manifes</a>
+            </div>
+        </div>
+    </li>
+
 
     <div class="sidebar-heading">
         Logout

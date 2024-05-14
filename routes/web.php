@@ -33,3 +33,6 @@ Route::prefix('pembayaran')->group(function(){
     Route::resource('metodepembayaran',\App\Http\Controllers\MetodePembayaranController::class);
 });
 
+Route::resource('statusmanifes',\App\Http\Controllers\StatusManifesController::class);
+
+

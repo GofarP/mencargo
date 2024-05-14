@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PesananMenCargo;
+use App\Models\MTC;
 use Illuminate\Http\Request;
 
-class PesananMenCargoController extends Controller
+class MTCController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('pesananmencargo.index');
+        //
     }
 
     /**
@@ -20,8 +20,7 @@ class PesananMenCargoController extends Controller
      */
     public function create()
     {
-        
-        return view('pesananmencargo.create');
+        //
     }
 
     /**
@@ -35,7 +34,7 @@ class PesananMenCargoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PesananMenCargo $pesananMenCargo)
+    public function show(MTC $mTC)
     {
         //
     }
@@ -43,7 +42,7 @@ class PesananMenCargoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PesananMenCargo $pesananMenCargo)
+    public function edit(MTC $mTC)
     {
         //
     }
@@ -51,7 +50,7 @@ class PesananMenCargoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PesananMenCargo $pesananMenCargo)
+    public function update(Request $request, MTC $mTC)
     {
         //
     }
@@ -59,7 +58,7 @@ class PesananMenCargoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PesananMenCargo $pesananMenCargo)
+    public function destroy(MTC $mTC)
     {
         //
     }

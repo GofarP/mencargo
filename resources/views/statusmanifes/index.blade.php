@@ -20,38 +20,30 @@
             <div class="container-fluid">
 
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Tambah Pesanan Men cargo</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Data Status Manifes</h1>
                 </div>
 
                 <!-- Content Row -->
                 <div class="row">
-                    @if (session('flash'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('flash') }}
+                    @if (session('success'))
+                        <div class="alert alert-success w-100" role="alert">
+                            {{ session('success') }}
                         </div>
-                    @elseif(session('error-flash'))
-                        <div class="alert alert-error" role="alert">
-                            {{ session('error-flash') }}
+                    @elseif(session('error'))
+                        <div class="alert alert-error w-100" role="alert">
+                            {{ session('error') }}
                         </div>
                     @endif
-
                     <div class="card w-100">
                         <div class="card-body">
-                            <x:pharaonic-select2::scripts />
-                            <form action="{{ route('pesananmencargo.store') }}" method="POST">
-                                @csrf
-                                @livewire('pesanan-men-cargo.pesanan-men-cargo-create')
-                                <button class="form-control btn-outline-success">Simpan</button>
-                            </form>
+                            @livewire('status-manifes.status-manifes-index')
                         </div>
                     </div>
-
                 </div>
 
             </div>
 
         </div>
-
 
         @include('partials.partials-dashboard.footer')
 
