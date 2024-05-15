@@ -10,4 +10,9 @@ class StatusManifes extends Model
     use HasFactory;
 
     protected $fillable=['nama','keterangan'];
+
+    public function mtc()
+    {
+        return $this->hasMany(MTC::class,'status_manifes_id','id');
+    }
 }

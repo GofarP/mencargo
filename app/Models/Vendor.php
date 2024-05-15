@@ -25,4 +25,9 @@ class Vendor extends Model
     {
         return $this->belongsTo(Wilayah::class, 'wilayah_id','id');
     }
+
+    public function mtc()
+    {
+        return $this->hasMany(MTC::class,'vendor_id','id');
+    }
 }

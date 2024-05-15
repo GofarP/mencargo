@@ -16,10 +16,11 @@ return new class extends Migration
             $table->dateTime('tanggal_update');
             $table->bigInteger('status_manifes_id');
             $table->bigInteger('pesanan_mencargo_id');
-            $table->bigInteger('vendor_id')->nullable();
-            $table->dateTime('tanggal_jalan');
-            $table->string('estimasi');
-            $table->string('image');
+            $table->bigInteger('vendor_id');
+            $table->dateTime('tanggal_jalan')->nullable();
+            $table->string('estimasi')->nullable();
+            $table->string('image')->nullable();
+            $table->string('penerima')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('m_t_c_s');
+        Schema::dropIfExists('mtc');
     }
 };

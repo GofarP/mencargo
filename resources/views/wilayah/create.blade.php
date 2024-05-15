@@ -52,7 +52,7 @@
                                 <div class="form-group">
                                     <label for="nama">Tingkatan Wilayah</label>
 
-                                        <select name="tingkatan_wilayah_id" id="tingkatan_wilayah_id" class="js-example-basic-single w-100">
+                                        <select name="tingkatan_wilayah_id" id="tingkatan_wilayah_id" class=" @error('tingkatan_wilayah_id') is-invalid @enderror js-example-basic-single w-100">
                                             <option value="">Pilih Wilayah Tingkatan</option>
                                             @foreach ($tingkatan_wilayah as $item)
                                             <option value="{{$item->id}}">{{$item->nama}}</option>
