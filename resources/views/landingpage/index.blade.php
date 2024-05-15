@@ -147,7 +147,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
                             <p class="mb-5">Tidak Perlu Risau Karena Di Men Cargo Minimum Kecil Mulai Dari 1 KG Aja Sudah Bisa Kirim Dengan Ongkir Murah
                             </p>
                             <form action="#">
-                                @livewire('tracking')
+                                @livewire('tracking.tracking')
 
                             </form>
                         </div>

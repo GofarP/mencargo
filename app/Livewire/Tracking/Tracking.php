@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Tracking;
 
 use Livewire\Component;
 
 class Tracking extends Component
 {
-    public $no_tracking;
-
     public function render()
     {
-        return view('livewire.tracking');
+        return view('livewire.tracking.tracking');
     }
 }
