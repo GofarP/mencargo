@@ -10,3 +10,5 @@
 <script src="{{asset('landingpagethemeassets/js/aos.js')}}"></script>
 
 <script src="{{asset('landingpagethemeassets/js/main.js')}}"></script>
+
+@livewireScripts

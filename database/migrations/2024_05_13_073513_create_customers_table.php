@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('nama');
             $table->string('email');
             $table->string('no_telp');
-            $table->string('organisasi');
             $table->bigInteger('wilayah_id');
             $table->string('alamat_detail');
             $table->enum('agama',['islam','kristen katolik','kristen protestan','hindu','buddha','khonghucu']);

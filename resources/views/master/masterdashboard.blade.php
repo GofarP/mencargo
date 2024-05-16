@@ -20,7 +20,7 @@
 
     @include('partials.partials-css.css-dashboard')
 
-    
+
 </head>
 
 <body id="page-top">
@@ -620,6 +620,7 @@
     </div>
 
     @include('partials.partials-javascript.javascript-dashboard')
+    <x:pharaonic-select2::scripts />
 
 </body>
 

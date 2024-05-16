@@ -24,4 +24,9 @@ class Customer extends Model
     {
         return $this->belongsTo(Wilayah::class, 'wilayah_id','id');
     }
+
+    public function pesananmencargo()
+    {
+        return $this->hasMany(PesananMenCargo::class,'customer_id','id');
+    }
 }

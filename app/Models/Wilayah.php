@@ -26,5 +26,5 @@ class Wilayah extends Model
         return $this->hasMany(Vendor::class, 'wilayah_id','id');
     }
 
-   
+
 }

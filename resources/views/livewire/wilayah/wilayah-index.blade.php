@@ -1,7 +1,7 @@
 <div class="table-responsive">
     <div class="d-flex flex-column align-items-end">
         <div class="mb-3">
-            <input type="text" wire:model.live.debounce.300ms="search">
+            <input type="text" wire:model.debounce.300ms="search">
         </div>
         <div>
             <a href="{{route('datawilayah.create')}}" class="btn btn-outline-success mb-3">Tambah</a>
@@ -22,7 +22,7 @@
                 <tr>
                     <td>{{$loop->iteration}}</td>
                     <td>{{$item->nama}}</td>
-                    <td>{{$item->tingkatwilayah->nama}}</td>
+                    <td>{{$item->tingkatwilayah->nama ?? '-'}}</td>
                     <td>
                         <a href="{{route('datawilayah.edit', $item->id)}}" class="btn btn-outline-warning">Edit</a>
                         <form action="{{route('datawilayah.destroy', $item->id)}}" method="POST" class="d-inline">

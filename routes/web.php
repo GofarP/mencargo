@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::singularResourceParameters(false);
 
+Route::get('test',[App\Http\Controllers\TestController::class,'index']);
+
 Route::get('/',[App\Http\Controllers\LandingPageController::class,'index'])->name('landing_page_index');
 
 Auth::routes();

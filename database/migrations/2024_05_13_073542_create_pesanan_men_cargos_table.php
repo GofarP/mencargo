@@ -43,22 +43,6 @@ return new class extends Migration
             $table->string('notelp_penerima');
             $table->string('diterima_oleh')->nullable();
             $table->longText('catatan_barang')->nullable();
-            $table->longText('catatan_admin_gudang')->nullable();
-            $table->unsignedBigInteger('barang_x_id');
-            $table->tinyInteger('packing');
-            $table->tinyInteger('jemput');
-            $table->unsignedBigInteger('areawilayah')->nullable();
-            $table->unsignedBigInteger('stokgudang')->nullable();
-            $table->longText('notemanifes')->nullable();
-            $table->unsignedBigInteger('verifikasi')->nullable();
-            $table->longText('alasan')->nullable();
-            $table->longText('keteranganmtc')->nullable();
-            $table->string('biaya_packing')->nullable();
-            $table->string('biaya_packing_kayu')->nullable();
-            $table->string('biaya_penjemputan_pengantaran')->nullable();
-            $table->string('biaya_asuransi')->nullable();
-            $table->string('biaya_sj_pajak_mati')->nullable();
-            $table->string('biaya_sj_stnk_mati')->nullable();
             $table->timestamps();
         });
     }

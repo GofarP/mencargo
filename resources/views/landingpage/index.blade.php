@@ -97,6 +97,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
 
                             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                                 <li><a href="#home-section" class="nav-link">Home</a></li>
+                                <li><a href="#tracking-section" class="nav-link">Cek Resi</a></li>
                                 <li><a href="#services-section" class="nav-link">Jasa Layanan Kami</a></li>
                                 <li><a href="#pricing-section" class="nav-link">Harga</a></li>
                                 <li><a href="#about-section" class="nav-link">Tentang Kami</a></li>
@@ -146,10 +147,6 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
                             <h1>PILIH MEN CARGO UNTUK MENGANTARKAN BARANG ANDA</h1>
                             <p class="mb-5">Tidak Perlu Risau Karena Di Men Cargo Minimum Kecil Mulai Dari 1 KG Aja Sudah Bisa Kirim Dengan Ongkir Murah
                             </p>
-                            <form action="#">
-                                @livewire('tracking.tracking')
-
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -183,6 +180,14 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
                 </div>
             </div>
 
+        </div>
+
+        <div class="site-section bg-light" id="tracking-section">
+            <div class="container">
+                <div class="row">
+                    @livewire('tracking.tracking')
+                </div>
+            </div>
         </div>
 
         <div class="site-section bg-light" id="services-section">

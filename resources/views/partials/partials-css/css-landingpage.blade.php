@@ -13,3 +13,5 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="{{asset('landingpagethemeassets/css/style.css')}}">
+
+    @livewireStyles

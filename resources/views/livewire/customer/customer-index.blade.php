@@ -1,7 +1,7 @@
 <div class="table-responsive">
     <div class="d-flex flex-column align-items-end">
         <div class="mb-3">
-            <input type="text" wire:model.live.debounce.300ms="search">
+            <input type="text" wire:model.debounce.300ms="search">
         </div>
         <div>
             <a href="{{route('customer.create')}}" class="btn btn-outline-success mb-3">Tambah</a>
